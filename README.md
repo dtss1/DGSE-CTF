@@ -11,7 +11,7 @@
 ## 📚 Sommaire
 
 > [!NOTE]
-> Voici les Writeups des différents challenges du CTF DGSE x Rootme 205
+> Voici les Writeups des différents challenges du CTF DGSE x Root-Me 2025
 
 - [Mission 1](./mission-1/writeup.md)
 - [Mission 2](./mission-2/m2writeup.md) 
