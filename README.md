@@ -4,7 +4,7 @@
 
 ## 🚀 Missions Présentées
 
-![Missions](imagesmain/missions.png)
+![Missions](ignore/missions.png)
 
 ---
 
