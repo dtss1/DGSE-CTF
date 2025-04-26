@@ -60,4 +60,7 @@ Le script a été téléchargé depuis l'adresse: `163.172.67.201`
 
 En reprenant le résultat précédent, on peut extraire le chemin: `/root/.0x00/pwn3d-by-nullv4stati0n.sh`
 
-**Flag: ||`RM{CWE-98:CWE-434:163.172.67.201:/root/.0x00/pwn3d-by-nullv4stati0n.sh}`||**
+**Flag:**
+```
+RM{CWE-98:CWE-434:163.172.67.201:/root/.0x00/pwn3d-by-nullv4stati0n.sh}
+```

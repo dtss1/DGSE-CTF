@@ -202,7 +202,10 @@ scp -P 22222 executor@163.172.67.183:/dev/shm/vault.kdbx .
 
 ![Flag](images/flag.png)
 
-**Flag: ||`RM{f5289180cb760ca5416760f3ca7ec80cd09bc1c3}`||**
+**Flag:**
+```
+RM{f5289180cb760ca5416760f3ca7ec80cd09bc1c3}
+```
 
 
 

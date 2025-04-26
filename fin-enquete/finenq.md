@@ -14,7 +14,7 @@ Une adresse IP a attiré notre attention tout au long des missions : **163.172.6
 > On l'a d'abord retrouvée lors de l'analyse des logs durant la mission SOC, liée à l'utilisation d'outils suspects.
 Lors de la mission 3, elle servait à héberger et distribuer des scripts malveillants, et enfin, pendant la mission 5, elle était utilisée pour diffuser des messages chiffrés.
 
-> Lors de notre quatrième mission nous avons mis la main sur plusieurs mots de passe du groupe. Parmi eux, un mot de passe SSH pour un utilisateur nommé **operator** était accompagné d'une note : 
+Lors de notre quatrième mission nous avons mis la main sur plusieurs mots de passe du groupe. Parmi eux, un mot de passe SSH pour un utilisateur nommé **operator** était accompagné d'une note : 
 
 ```
 SSH password for the attacking machine. The IP address changes regularly, please refer to the last operation to obtain it.
@@ -28,7 +28,7 @@ SSH password for the attacking machine. The IP address changes regularly, please
 ![SSHPSEUD](images/ssh.png)
 
 ```md
-- By **voidSyn42** --> voidSyn42 
+- By **voidSyn42**
 ```
 
 - On peut utiliser "linkook", qui est un outil OSINT qui permet d'identifier, à partir d'un simple nom d'utilisateur, les comptes sur les réseaux sociaux ainsi que les adresses e-mail associées à celui-ci :
@@ -50,7 +50,7 @@ SSH password for the attacking machine. The IP address changes regularly, please
 - En se renseignant sur les commits GitHub, on apprend que l'on peut récupérer des informations supplémentaires grâce à l’API ([doc](https://docs.github.com/en/rest/commits/commits?apiVersion=2022-11-28#get-a-commit)
 )
 
-> La commande suivante permet d'extraire les adresses e-mail associées aux commits :
+- La commande suivante permet d'extraire les adresses e-mail associées aux commits :
 
 ```bash
 curl -s -H "Accept: application/vnd.github.cloak-preview" \
@@ -58,7 +58,7 @@ curl -s -H "Accept: application/vnd.github.cloak-preview" \
 | grep -Po '"email":\s*"\K[^"]+' \
 | sort | uniq -c
 ```
-- Résultat : (image5)
+- Résultat :
 
 noreply@github.com (2 occurrences), qui correspond aux commits anonymisés par GitHub.
 
@@ -70,7 +70,7 @@ syn.pl42@proton.me (16 occurrences), qui semble être l’adresse principale uti
 
 ![SSHPSEUD](images/epios.png)
 
---> Cette adresse est reliée à un compte Google, Epios nous permet également d'identifier les services liés à ce compte (image6)
+Cette adresse est reliée à un compte Google, Epios nous permet également d'identifier les services liés à ce compte (image6)
 
 - En consultant le lien Google Maps, ce compte apparaît sous le nom de **Pierre Lapresse** :
 
@@ -80,4 +80,7 @@ syn.pl42@proton.me (16 occurrences), qui semble être l’adresse principale uti
 
 - On peut donc clore l'enquête et soumettre le flag sous la forme RM{nom.prenom}.
 
-**Flag: ||RM{lapresse.pierre}||**
+**Flag:**
+```
+RM{lapresse.pierre}
+```
