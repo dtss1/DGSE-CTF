@@ -16,7 +16,6 @@ Pour ces deux options nous devons obligatoirement upload un document word .docx.
 
 > [!IMPORTANT]
 > Mais qu'est-ce qu'un document docx ?
-
 > Un .docx fonctionne comme une archive .zip : il contient plusieurs fichiers, dont des fichiers XML. L’un d’eux, app.xml, est utilisé pour stocker des métadonnées.
 
 On upload un document .docx vierge avec la première option et on récupère le document "signé".
