@@ -16,7 +16,7 @@ GET /install_nptdate.sh HTTP/1.1
 
 Voici le script .sh :
 
-```
+```zsh
 #!/bin/bash
 
 # ntpdate.sh ... NTP Utility Sync Setup (v1.3.4)
