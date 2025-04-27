@@ -70,7 +70,7 @@ syn.pl42@proton.me (16 occurrences), qui semble être l’adresse principale uti
 
 ![SSHPSEUD](images/epios.png)
 
-Cette adresse est reliée à un compte Google, Epios nous permet également d'identifier les services liés à ce compte (image6)
+Cette adresse est reliée à un compte Google, Epios nous permet également d'identifier les services liés à ce compte.
 
 - En consultant le lien Google Maps, ce compte apparaît sous le nom de **Pierre Lapresse** :
 
