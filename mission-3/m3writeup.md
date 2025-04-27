@@ -87,7 +87,7 @@ echo "[ntpdate] NTP sync utilities installed successfully."
 
 Analyse :
 
-Le script install_nptdate.sh crée 40 dossiers dans /opt, en choisi un (__DST) pour télécharger le binaire Python (.sys) et un fichier rdme (.rdme) depuis vastation.null, puis installe une tâche cron (/etc/cron.d/.ntpdate_sync) qui exécute ${__V} avec le PYTHONPATH=${__PYLIB}, et génère plusieurs fausses crontabs.
+Le script install_nptdate.sh crée 40 dossiers dans /opt, en choisi un (__DST) pour télécharger le binaire (.sys) et un fichier rdme (.rdme) depuis vastation.null, puis installe une tâche cron (/etc/cron.d/.ntpdate_sync) qui exécute ${__V} avec le PYTHONPATH=${__PYLIB}, et génère plusieurs fausses crontabs.
 
 On peut lancer l'image de la VM compromise avec VMware.
 
@@ -96,7 +96,7 @@ On se connecte sur le compte de johndoe et on effectue la commande :
 ```zsh
 find /opt -type f -name ".sys" -o -name ".rdme"
 ```
-Pour trouver dans quel dossier le binaire python .sys est :
+Pour trouver dans quel dossier le binaire .sys se trouve :
 
 ![Place](images/place.png)
 
