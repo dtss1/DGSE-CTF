@@ -235,11 +235,13 @@ Que au sein de ces 40 octets, les 16 octets utiles pour le décryptage se situen
 
 On peut ensuite déchiffrer avec la clé et l’IV connus (script décompilé) :
 
+```
 Clé : e8f93d68b1c2d4e9f7a36b5c8d0f1e2a
 
 IV : 1f2d3c4b5a69788766554433221100ff
 
 Mode : AES-CBC
+```
 
 On utilise un premier script pour extraire le bon bloc : (usage == python3 script.py capture_victim.pcap)
 
