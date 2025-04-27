@@ -277,6 +277,6 @@ J'obtiens une clé SSH et le flag :
 
 ![Flag+decrypt](images/decrypt.png)
 
-```md
-Flag : **RM{986b8674b18e7f3c36b24cf8c8195b36bba01d61}**
+```
+Flag : RM{986b8674b18e7f3c36b24cf8c8195b36bba01d61}
 ```
