@@ -1,4 +1,4 @@
-# Mission 3 (Forensic) - DGSECTF -
+# Mission 3 (Forensic) - DGSECTF
 
 ![Mission](images/mission.png)
 
