@@ -1,4 +1,4 @@
-# # Mission 2 DGSE x Rootme (FORENSIC)
+# Mission 2 DGSE x Rootme (FORENSIC)
 
 ![Mission](images/mission.png)
 
