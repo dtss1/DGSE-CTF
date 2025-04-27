@@ -14,6 +14,9 @@ On nous met à disposition une plateforme SOC avec des logs Apache et des logs s
 ```SQL
 request : "*../*etc/*" AND status=200
 ```
+**Résultat :**
+
+![Result](images/result1.png)
 
 **Extrait de log** :
 ```SQL
@@ -23,7 +26,6 @@ log: 10.143.17.101 - - [28/Mar/2025:00:21:36 +0100] "GET /?lang=/etc&page=passwd
 
 L'attaquant a réussit à inclure le fichier */etc/passwd* --> `CWE-98`
 
-
 ### 2. CWE de la seconde vulnérabilité (logs Apache)
 
 **Type** : File Upload arbitraire
@@ -32,6 +34,9 @@ L'attaquant a réussit à inclure le fichier */etc/passwd* --> `CWE-98`
 ```SQL
 verb : GET and response : 200 and request : "*?cmd=*"
 ```
+**Résultat :**
+
+![Result2](images/result2.png)
 
 **Extrait de log** :
 ```SQL
@@ -41,13 +46,15 @@ log: 10.143.17.101 - - [28/Mar/2025:00:31:40 +0100] "GET /admin-page/upload/68af
 
 Un fichier nommé ***ev1L.php.png*** a été uploadé, puis invoqué avec une commande système via le paramètre ***cmd*** →  `CWE-434`
 
-
 ### 3. Adresse IP du serveur (logs systemd)
 
 On peut rechercher **toutes** les occurrences de téléchargement via `wget` grâce à cette requête:
 ```SQL
 message : "wget"
 ```
+**Résultat :**
+
+![Result2](images/result3.png)
 
 **Extrait de log** :
 ```JSON
