@@ -47,7 +47,7 @@ SSH password for the attacking machine. The IP address changes regularly, please
 
 > C’est peut-être une piste intéressante à creuser.
 
-- En se renseignant sur les commits GitHub, on apprend que l'on peut récupérer des informations supplémentaires grâce à l’API ([doc](https://docs.github.com/en/rest/commits/commits?apiVersion=2022-11-28#get-a-commit)
+- En se renseignant sur les commits GitHub, on apprend que l'on peut récupérer des informations supplémentaires grâce à l’API ( [doc](https://docs.github.com/en/rest/commits/commits?apiVersion=2022-11-28#get-a-commit)
 )
 
 - La commande suivante permet d'extraire les adresses e-mail associées aux commits :
@@ -76,7 +76,7 @@ Cette adresse est reliée à un compte Google, Epios nous permet également d'id
 
 ![SSHPSEUD](images/maps.png)
 
-- Cela nous donne le nom et le prénom de l’individu derrière le pseudo voidSyn42.
+- Cela nous donne le nom et le prénom de l’individu derrière le pseudo **voidSyn42**.
 
 - On peut donc clore l'enquête et soumettre le flag sous la forme RM{nom.prenom}.
 
