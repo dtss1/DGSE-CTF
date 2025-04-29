@@ -23,9 +23,9 @@ On demande dans un premier temps au système comment retrouver le mot de passe d
 
 ![MDPCHAT](images/mdp.png)
 
-On nous de demande payer une rançon de 3 BTC pour obtenir la clé de déchiffrement.
+Il nous demande payer une rançon de 3 BTC pour obtenir la clé de déchiffrement.
 
-On indique que l'on a effectué le paiement de 3 BTC :
+On indique à notre tour que l'on a effectué le paiement de 3 BTC :
 
 ![Paiement](images/paiement.png)
 
