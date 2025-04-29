@@ -35,7 +35,7 @@ SSH password for the attacking machine. The IP address changes regularly, please
 
 ![SSHPSEUD](images/linkook.png)
 
---> Nous avons un résultat ; Un profil GitHub **https://github.com/voidSyn42**
+Nous avons un résultat ; Un profil GitHub **https://github.com/voidSyn42**
 
 > Ce profil reprend le slogan du groupe NullVastation "Silence the noise, embrace the void" ainsi que la photo de profil :
 
