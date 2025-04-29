@@ -6,13 +6,13 @@
 
 ![Missions](ignore/missions.png)
 > [!IMPORTANT]
-> Ainsi qu'une **fin d'enquête**, que l'on débloque une fois les cinq missions réalisées.
+> Ainsi qu'une **fin d'enquête**, que l'on débloque une fois les **cinq missions réalisées.**
 ---
 
 ## 📚 Sommaire
 
 > [!NOTE]
-> Voici les Writeups des différents challenges du CTF DGSE x Root-Me 2025
+> Voici les Writeups des différents challenges du **CTF DGSE x Root-Me 2025**
 
 - [Mission 1](./mission-1/m1writeup.md)
 - [Mission 2](./mission-2/m2writeup.md) 
