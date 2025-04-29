@@ -118,7 +118,7 @@ On essaie de récupérer plusieurs fichiers systèmes comme les clés ssh mais o
 * On arrive dans un premier temps à récupérer la config OpenSSH avec le path "/etc/ssh/sshd_config" ce qui leak le port utilisé pour OpenSSH : **Port 22222**
 * Dans un second temps on récupère le hostname (document-station).
 
-Il y a sûrement l'utilisateur **document-user** donc on recupère également son historique bash :
+On recupère l'historique bash de **document-user** :
 
 ![History](images/Bashistory.png)
 
@@ -130,7 +130,7 @@ echo "cABdTXRyUj5qgAEl0Zc0a" >> /tmp/exec_ssh_password.tmp
 
 On peut donc déduire que **cABdTXRyUj5qgAEl0Zc0a** est le mot de passe d'un utilisateur, or ce n'est pas celui de document-user.
 
-Le fichier passwd nous a également fuiter des users, on en teste plusieurs avec ce mot de passe, on finit par trouver le bon **executor**.
+Le fichier passwd nous a également fuiter d'autres users, on en teste plusieurs avec ce mot de passe, on finit par trouver le bon **executor**.
 
 ```
 sshpass -p 'cABdTXRyUj5qgAEl0Zc0a' ssh -p 22222 executor@163.172.67.183
