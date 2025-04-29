@@ -23,7 +23,7 @@ SSH password for the attacking machine. The IP address changes regularly, please
 
 - En arrivant sur la machine on retrouve le dossier tools avec les scripts des différents outils des missions.
 
---> En explorant les différents outils et en lisant le readme.md qui explique le fonctionnement de nighshade, on peut voir un pseudo : 
+- En explorant les différents outils et en lisant le readme.md qui explique le fonctionnement de nighshade, on peut voir un pseudo : 
 
 ![SSHPSEUD](images/ssh.png)
 
