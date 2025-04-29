@@ -66,7 +66,7 @@ syn.pl42@proton.me (16 occurrences), qui semble être l’adresse principale uti
 
 - On cherche à obtenir davantage d’informations sur cette nouvelle adresse Proton.
 
-- En utilisant l'outil Epios (un outil OSINT spécialisé dans la corrélation d'adresses e-mail entre différents fournisseurs), on trouve une correspondance :
+- En utilisant l'outil Epieos (un outil OSINT spécialisé dans la corrélation d'adresses e-mail entre différents fournisseurs), on trouve une correspondance :
 
 ![SSHPSEUD](images/epios.png)
 
