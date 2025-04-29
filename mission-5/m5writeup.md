@@ -96,7 +96,7 @@ for idx, enc in enumerate(messages, 1):
 ```
 
 
-Mais on se rend compte que en testant de nombreux **model** et **brand**, les 6 premiers messages restent chiffrés :
+Mais on se rend compte en testant de nombreux couples **model:brand**, que les 6 premiers messages restent chiffrés :
 
 ![Chiffrés](images/restechiff.png)
 
