@@ -1,4 +1,4 @@
-# Mission 2 DGSE x Rootme (SOC)
+# Mission 2 DGSE x RootMe (SOC)
 
 ![Brief](images/brief.png)
 
