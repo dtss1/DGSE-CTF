@@ -221,7 +221,7 @@ ping -c 1 -p <payload-chiffré>
 > Les segments originaux ont une taille de 15 octets --> pad avec PKCS#7 --> chiffrés en AES CBC puis converti en hexadécimal.
 
 --> Je suppose que /root/.secret est le flag du challenge, il n'est plus sur la machine.
-    En revanche il est sûrement présent dans le trafic réseau suspect (chiffrés en AES-CBC)
+    En revanche il est sûrement présent dans le trafic réseau suspect (chiffré en AES-CBC)
 
 On ouvre à nouveau le fichier .pcap et on filtre avec ICMP.
 
