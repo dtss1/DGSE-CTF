@@ -58,7 +58,7 @@ curl -s -H "Accept: application/vnd.github.cloak-preview" \
 | grep -Po '"email":\s*"\K[^"]+' \
 | sort | uniq -c
 ```
-- Résultat :
+**Résultat** :
 
 noreply@github.com (2 occurrences), qui correspond aux commits anonymisés par GitHub.
 
