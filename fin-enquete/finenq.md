@@ -4,7 +4,7 @@
 
 # Writeup
 
-Toutes les missions précédentes nous ont permis de collecter des informations sur le groupe attaquant NullVastation, de plus, l’objectif n°3 nous oriente particulièrement : c'est sur leurs serveurs que se trouvent les dernières pièces du puzzle.
+Toutes les missions précédentes nous ont permis de collecter des informations sur le groupe attaquant NullVastation, de plus, un des objectifs de la mission nous oriente particulièrement : c'est sur leurs serveurs que se trouvent les dernières pièces du puzzle.
 
 - Voici ce que l'on a retenu à ce sujet :
 
