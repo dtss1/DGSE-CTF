@@ -1,4 +1,4 @@
-# Mission 5 DGSE x RootMe (MOBILE)
+# Mission 5 DGSE x Root-Me (MOBILE)
 
 ![Mission](images/mission.png)
 
