@@ -1,4 +1,4 @@
-# Mission 4 DGSE x RootMe (PENTEST)
+# Mission 4 DGSE x Root-Me (PENTEST)
 
 ![Brief](images/mission.png)
 
