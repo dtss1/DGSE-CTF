@@ -69,7 +69,7 @@ STATIC_SALT = "s3cr3t_s@lt"
 model = "SM-S908E"
 brand = "samsung"
 
-messages = [...]          # 9 chaînes en b64 - voir script solve
+messages = [...]          # 9 chaînes chiffrées - voir script solve
 
 def hash_device_id(model, brand):
     device_id = f"{model}:{brand}"
