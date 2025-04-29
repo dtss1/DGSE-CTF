@@ -85,22 +85,22 @@ echo "[ntpdate] NTP sync utilities installed successfully."
 
 À première vu ce script est clairement malveillant. 
 
-Analyse :
+**Analyse** :
 
 Le script install_nptdate.sh crée 40 dossiers dans /opt, en choisi un (__DST) pour télécharger le binaire (.sys) et un fichier rdme (.rdme) depuis vastation.null, puis installe une tâche cron (/etc/cron.d/.ntpdate_sync) qui exécute ${__V} avec le PYTHONPATH=${__PYLIB}, et génère plusieurs fausses crontabs.
 
-On peut lancer l'image de la VM compromise avec VMware.
+- On peut lancer **l'image** de la VM compromise avec VMware.
 
-On se connecte sur le compte de johndoe et on effectue la commande : 
+- On se connecte sur le compte de **johndoe** et on effectue la commande : 
 
 ```zsh
 find /opt -type f -name ".sys" -o -name ".rdme"
 ```
-Pour trouver dans quel dossier le binaire .sys se trouve :
+Pour localiser le fichier binaire .sys :
 
 ![Place](images/place.png)
 
-Il se trouve dans /opt/fJQsJUNS/.sys.
+Il se trouve dans `/opt/fJQsJUNS/.sys`.
 
 
 ```zsh
@@ -112,13 +112,13 @@ johndoe@UXWS112:/opt/fJQsJUNS$ file .sys
 > On le savait déjà car en décodant la chaîne en Base64 du echo : "aHR0cDovL3Zhc3RhdGlvbi5udWxsOjgwODAvbnRwZGF0ZV91dGlsLmNweXRob24tMzcucHlj" --> 
 http://vastation.null:8080/ntpdate_util.cpython-37.pyc
 
-C'est donc un fichier Python compilé contenant du bytecode.
+Il s’agit d’un fichier Python compilé au format bytecode. 
 
-On récupère le fichier avec autopsy :
+- On le recupère avec autopsy :
 
 ![autopsy](images/autopsy.png)
 
-On le décompile à l'aide de https://pylingual.io/.
+Puis on le décompile à l'aide de https://pylingual.io/.
 
 Voici son code décompilé : 
 
