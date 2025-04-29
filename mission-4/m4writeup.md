@@ -8,9 +8,7 @@
 
 - Sur cette application nous avons **deux options** :
 
-```
-"Track a Word document" et "Identify a victim from a document"
-```
+`Track a Word document` et `Identify a victim from a document`
 
 Pour ces deux options nous devons obligatoirement upload un **document word .docx**.
 
@@ -20,7 +18,7 @@ Pour ces deux options nous devons obligatoirement upload un **document word .doc
 
 On upload un document .docx vierge avec la première option et on récupère le document "signé".
 
--- Le fichier **app.xml** contient une balise personnalisée VictimID : 
+-- Le fichier **app.xml** contient une balise personnalisée **VictimID : 
 
 ```xml
 <VictimID>victim-42382ede-f219-4076-9758-be4ee93686d4</VictimID>
