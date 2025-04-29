@@ -93,6 +93,7 @@ for idx, enc in enumerate(messages, 1):
         print(f"[Message {idx}] {txt}")
     except Exception:
         print(f"[Message {idx}] error")
+```
 
 
 Mais on se rend compte que en testant de nombreux **model** et **brand**, les 6 premiers messages restent chiffrés :
