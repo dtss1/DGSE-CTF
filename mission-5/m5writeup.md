@@ -7,13 +7,13 @@ On a une application de messagerie codée en Java, le code source a été analys
 Le fichier **AndroidManifest.xml** nous permet d'identifier le package et les composants de l’application (fragments : Message, Invite, Profile, Home)
 
 Les fichiers importants sont : 
-- [HomeViewModel](images/decrypt.png) : charge les messages et les déchiffre grâce à la méthode `decryptMessages` 
+- [HomeViewModel](images/decrypt.png) : charge les messages et les déchiffre grâce à la méthode `decryptMessages`.
     - Mécanisme de dérivation de la clé AES:
 
         - Obtention du modèle et de la marque de l’appareil via `Build.MODEL` et `Build.BRAND`.
         - Calcul d’un hash (SHA‑256 puis encodage Base64) de la chaîne `"MODEL:BRAND"`.
         - Dérivation de la clé AES en combinant ce hash avec un salt statique `"s3cr3t_s@lt"` et en appliquant SHA‑256.
-- [RetrofitClient](images/url.png) : indique l'url de l'API [http://163.172.67.201:8000/], [ApiService](images/endpoint.png) l'endpoint `/messages` accessible via la méthode GET ainsi que le paramètre `id`
+- [RetrofitClient](images/url.png) : indique l'url de l'API [http://163.172.67.201:8000/], [ApiService](images/endpoint.png) l'endpoint `/messages` accessible via la méthode GET ainsi que le paramètre `id`.
 
 Pour récupérer les messages, il nous faut donc d'abord obtenir la marque et le modèle de notre appareil (=émulateur Bluestacks). On peut pour cela utiliser **adb**:
 ```powershell
