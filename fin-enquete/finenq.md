@@ -1,4 +1,4 @@
-# Fin d'enquête DGSE x RootMe (OSINT)
+# Fin d'enquête DGSE x Root-Me (OSINT)
 
 ![Brief](images/brief.png)
 
