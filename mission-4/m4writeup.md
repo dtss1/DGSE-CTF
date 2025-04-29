@@ -4,15 +4,15 @@
 
 # Writeup
 
-- On peut se rendre sur l'Application Web de l'entité.
+- On peut se rendre sur **l'Application Web de l'entité**.
 
-- Sur cette application Web nous avons deux options :
+- Sur cette application nous avons **deux options** :
 
 ```
 "Track a Word document" et "Identify a victim from a document"
 ```
 
-Pour ces deux options nous devons obligatoirement upload un document word .docx.
+Pour ces deux options nous devons obligatoirement upload un **document word .docx**.
 
 > [!IMPORTANT]
 > Mais qu'est-ce qu'un document docx ?
@@ -26,9 +26,9 @@ On upload un document .docx vierge avec la première option et on récupère le 
 <VictimID>victim-42382ede-f219-4076-9758-be4ee93686d4</VictimID>
 ```
 
-La deuxième option récupère le contenu de cette la balise pour "identifier la victime".
+La deuxième option **récupère** le contenu de cette la balise pour "identifier la victime".
 
-On voit donc la possibilité d'une injection XXE pour récupérer des fichiers système.
+On voit donc la possibilité d'une injection **XXE** pour récupérer des fichiers système.
 
 --> On modifie le contenu de app.xml et on update l'archive docx pour tester la récupération de /etc/passwd : 
 
