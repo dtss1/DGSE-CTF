@@ -138,8 +138,9 @@ sshpass -p 'cABdTXRyUj5qgAEl0Zc0a' ssh -p 22222 executor@163.172.67.183
 
 - On navigue rapidement dans les répertoires, une fois dans /home/administrator/, plusieurs éléments intéressants apparaissent.
 
-vault.kdbx - C'est un fichier de base de données KeePass, souvent utilisé pour stocker des mots de passe de manière chiffrée.
-logo.jpg   - C'est un fichier image qui a première vu n'a rien d'intéressant ^^.
+`vault.kdbx` - C'est un fichier de base de données KeePass, souvent utilisé pour stocker des mots de passe de manière chiffrée.
+
+`logo.jpg`   - C'est un fichier image qui a première vu n'a rien d'intéressant ^^.
 
 - On veut récupérer ces deux fichiers car ils peuvent être la clé de l'énigme mais en l'état **Nous n'avons pas les droits de lecture dessus.**
 
