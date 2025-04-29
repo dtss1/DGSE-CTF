@@ -106,7 +106,7 @@ On récupére [une liste](https://storage.googleapis.com/play_public/supported_d
 
 ![Liste](images/preview.png)
 
-On prend uniquement les valeurs de la 4ème colonne pour la marque Google et on tente le déchiffrement grâce à ce script(solve):
+On prend uniquement les valeurs de la 4ème colonne pour la marque Google et on tente le déchiffrement grâce à ce script **(solve)** :
 
 ```python
 import csv, base64, hashlib, sys
