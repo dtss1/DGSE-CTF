@@ -102,7 +102,7 @@ Mais on se rend compte que en testant de nombreux **model** et **brand**, les 6 
 
 On comprend pourquoi en se rendant sur l'application et en relisant la consigne: `Lors d'une arrestation au domicile d'un des attaquants précédemment identifiés, l'équipe a saisi une vielle tablette Google utilisée pour leurs communications.`
 
-On récupére [une liste](https://storage.googleapis.com/play_public/supported_devices.csv) d'appareils Android qui contient les anciens modèles de tablette Google (format csv pour le script - aperçu .html disponible) :
+On récupére [une liste](https://storage.googleapis.com/play_public/supported_devices.csv) d'appareils Android qui contient les anciens modèles de tablette Google (format csv pour le script - aperçu .html) :
 
 ![Liste](images/preview.png)
 
