@@ -44,7 +44,7 @@ print(hash_device_id(model, brand))
 
 Pour récupérer les messages : 
 ```shell
-curl "http://163.172.67.201:8000/messages?id=`bSNMpCFc3a8TmeA78Mun3vRgb9D2S6pufNR/9rY6/a8=`"
+curl "http://163.172.67.201:8000/messages?id=bSNMpCFc3a8TmeA78Mun3vRgb9D2S6pufNR/9rY6/a8="
 ```
 
 **Résultat :**
