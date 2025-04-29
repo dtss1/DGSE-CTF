@@ -14,23 +14,23 @@ On peut également télécharger un échantillon des données :
 
 ![Password](images/passwordprotect.png)
 
-Malheureusement l'archive zip est protégée par un mot de passe, il va donc falloir falloir le retrouver pour extraire le contenu de l'archive.
+Malheureusement l'archive zip est protégée par un mot de passe, il va donc falloir le retrouver pour extraire le contenu de l'archive.
 
-> On a également la possibilité d'utiliser un chat (Portail de négociation) via une icône "message" en bas à droite de la page.
+> On a également la possibilité d'utiliser un chat (Negotiation Portal) via une icône "message" en bas à droite de la page.
 
-On demande dans un premier temps via ce chat, comment retrouver le mot de passe de l'échantillon pour Neoxis Laboratories : 
+On demande dans un premier temps au système comment retrouver le mot de passe de l'échantillon pour Neoxis Laboratories : 
 
 ![MDPCHAT](images/mdp.png)
 
-On nous indique qu'il faut payer une rançon de 3 BTC pour obtenir la clé de déchiffrement.
+On nous de demande payer une rançon de 3 BTC pour obtenir la clé de déchiffrement.
 
-J'indique au système que j'ai effectué le paiement de 3 BTC :
+On indique que l'on a effectué le paiement de 3 BTC :
 
-![MDPCHAT](images/paiement.png)
+![Paiement](images/paiement.png)
 
-Mais il exige, pour valider la transaction de fournir "un lien vers l'explorateur Bitcoin avec l'ID".
+Mais il exige pour valider la transaction de fournir "un lien vers l'explorateur Bitcoin avec l'ID".
 
---> J'ai donc l'idée de réaliser une injection de prompt indirecte en me basant sur un scénario dans lesquel l'utilisateur aurait effectué un paiement et valider la transaction avec un identifiant de BTC valide, le système aurait donc répondu logiquement avec la clé de déchiffrement.
+--> J'ai donc l'idée de réaliser [une injection de prompt indirecte](https://cetas.turing.ac.uk/publications/indirect-prompt-injection-generative-ais-greatest-security-flaw) en me basant sur un scénario dans lequel l'utilisateur aurait effectué un paiement et validé la transaction avec un identifiant de BTC valide, le système aurait donc répondu logiquement avec la clé de déchiffrement.
 
 **Prompt :**
 
