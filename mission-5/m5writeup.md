@@ -73,19 +73,19 @@ messages = [...]          # 9 chaînes chiffrées - voir script solve
 
 def hash_device_id(model, brand):
     device_id = f"{model}:{brand}"
-    digest    = hashlib.sha256(device_id.encode()).digest()
+    digest = hashlib.sha256(device_id.encode()).digest()
     return base64.b64encode(digest).decode()
 
 def derive_key(device_id_hash, salt=STATIC_SALT):
     return hashlib.sha256(f"{device_id_hash}:{salt}".encode()).digest()
 
 def decrypt_message(enc_b64, key):
-    data   = base64.b64decode(enc_b64)
-    plain  = AES.new(key, AES.MODE_CBC, STATIC_IV).decrypt(data)
+    data = base64.b64decode(enc_b64)
+    plain = AES.new(key, AES.MODE_CBC, STATIC_IV).decrypt(data)
     return plain[:-plain[-1]]
 
 device_id_hash = hash_device_id(model, brand)
-key            = derive_key(device_id_hash)
+key = derive_key(device_id_hash)
 
 for idx, enc in enumerate(messages, 1):
     try:
