@@ -58,7 +58,7 @@ import shutil
 import requests
 
 docx_file = "passwd.docx" # On part de l'archive que nous avons utilisé pour récupérer passwd
-xxe_target = "/etc/passwd"  # Path pour la cible xxe
+xxe_target = "/etc/passwd"  # Path pour la "cible" xxe
 base_url = "http://163.172.67.183"
 upload_url = f"{base_url}/read" 
 
