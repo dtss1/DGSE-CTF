@@ -115,7 +115,7 @@ print(response.text)
 
 On essaie de récupérer plusieurs fichiers systèmes comme les clés ssh mais on a une erreur qui signifie que nous n'avons pas les droits pour les lire.
 
-* On arrive dans un premier temps à récupérer la config OpenSSH avec le path "/etc/ssh/sshd_config" ce qui leak le port utilisé pour OpenSSH : Port 22222.
+* On arrive dans un premier temps à récupérer la config OpenSSH avec le path "/etc/ssh/sshd_config" ce qui leak le port utilisé pour OpenSSH : **Port 22222**
 * Dans un second temps on récupère le hostname (document-station).
 
 Il y a sûrement l'utilisateur **document-user** donc on recupère également son historique bash :
