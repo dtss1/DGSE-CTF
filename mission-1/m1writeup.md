@@ -41,7 +41,7 @@ Lors d'une précédente simulation de négociation, un utilisateur a fourni un i
 
 **Résultat:**
 
-![Clé](images/clé.png)
+![Clé](images/cle.png)
 
 J'obtiens la clé de déchiffrement `cf0fe99934cbc10c7e55bada9870bda1691a4a27`, je peux donc extraire l'archive zip, je tombe sur le flag dans le fichier `Medicine_Recipes.pdf` :
 
