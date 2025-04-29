@@ -159,7 +159,7 @@ User executor may run the following commands on document-station:
 sudo -u administrator /usr/bin/screenfetch -s -S '/bin/bash -p'
 ```
 
-- Ici, on utilise l’option -S pour exécuter /bin/bash -p, le flag -p (privileged mode) permet de conserver les privilèges de l’utilisateur avec lequel la commande est lancée — en l’occurrence administrator.
+- Ici, on utilise l’option -S pour exécuter `/bin/bash -p`, le flag `-p` (privileged mode) permet de conserver les privilèges de l’utilisateur avec lequel la commande est lancée — en l’occurrence administrator.
 
 --> On ouvre donc un shell bash en tant que administrator en exploitant **cette erreur de configuration :**
 
