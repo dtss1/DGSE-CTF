@@ -142,7 +142,7 @@ sshpass -p 'cABdTXRyUj5qgAEl0Zc0a' ssh -p 22222 executor@163.172.67.183
 
 `logo.jpg`   - C'est un fichier image qui a première vu n'a rien d'intéressant ^^.
 
-- On veut récupérer ces deux fichiers car ils peuvent être la clé de l'énigme mais en l'état **Nous n'avons pas les droits de lecture dessus.**
+- On veut récupérer ces deux fichiers car ils peuvent être la clé de l'énigme mais en l'état **nous n'avons pas les droits de lecture dessus.**
 
 --> En regardant les droits sudoers en tant qu'executor, on remarque que l'on peut éxécuter le binaire screenfetch en tant qu'administrator:
 
