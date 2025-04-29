@@ -16,6 +16,7 @@ On peut également télécharger un échantillon des données avec l'option **Do
 
 Malheureusement l'archive zip est protégée par un mot de passe, il va donc falloir le retrouver pour extraire le contenu de l'archive.
 
+>[!IMPORTANT]
 > On a également la possibilité d'utiliser un chat (Negotiation Portal) via une icône "message" en bas à droite de la page.
 
 On demande dans un premier temps au système comment retrouver le mot de passe de l'échantillon pour Neoxis Laboratories : 
