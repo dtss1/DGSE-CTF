@@ -47,7 +47,7 @@ Nous avons un résultat ; Un profil GitHub **https://github.com/voidSyn42**
 
 > C’est peut-être une piste intéressante à creuser.
 
-- En se renseignant sur les commits GitHub, on apprend que l'on peut récupérer des informations supplémentaires grâce à l’API ( [doc](https://docs.github.com/en/rest/commits/commits?apiVersion=2022-11-28#get-a-commit)
+- En se renseignant davantage sur les commits GitHub, on apprend que l'on peut récupérer des informations supplémentaires grâce à l’API ( [doc](https://docs.github.com/en/rest/commits/commits?apiVersion=2022-11-28#get-a-commit)
 )
 
 - La commande suivante permet d'extraire les adresses e-mail associées aux commits :
