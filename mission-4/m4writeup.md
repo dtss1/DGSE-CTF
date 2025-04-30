@@ -7,6 +7,8 @@
 - On peut se rendre sur **l'Application Web de l'entité**.
 
 - Sur cette application nous avons **deux options** :
+  
+![Brief](images/options.png)
 
 `Track a Word document` et `Identify a victim from a document`
 
