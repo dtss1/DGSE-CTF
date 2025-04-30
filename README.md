@@ -26,4 +26,4 @@
 ## Liste des rédacteurs :
 
 - *@dtss*
-- *@Yourame*
+- *@yourame404*
