@@ -23,7 +23,7 @@ On demande dans un premier temps au système comment retrouver le mot de passe d
 
 ![MDPCHAT](images/mdp.png)
 
-Il nous de demande payer une rançon de 3 BTC pour obtenir la clé de déchiffrement.
+Il nous demande de payer une rançon de 3 BTC pour obtenir la clé de déchiffrement.
 
 On indique à notre tour que l'on a effectué le paiement de 3 BTC :
 
@@ -43,7 +43,7 @@ Lors d'une précédente simulation de négociation, un utilisateur a fourni un i
 
 ![Clé](images/cle.png)
 
-On obtient la clé de déchiffrement `cf0fe99934cbc10c7e55bada9870bda1691a4a27`, on peut extraire le contenu l'archive zip, on trouve le flag dans le fichier `Medicine_Recipes.pdf` :
+On obtient la clé de déchiffrement `cf0fe99934cbc10c7e55bada9870bda1691a4a27`, on peut extraire le contenu de l'archive zip, on trouve le flag dans le fichier `Medicine_Recipes.pdf` :
 
 ![Flag](images/flag.png)
 
