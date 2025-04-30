@@ -10,7 +10,7 @@ En accédant au site web de l'entité :
 
 On peut observer une section **LEAKED DATA**, notre objectif est de récupérer les données compromises de Neoxis Laboratories.
 
-On peut également télécharger un échantillon des données avec l'option **Download Data Sample**:
+Nous avons la possibilité de télécharger un échantillon des données avec l'option **Download Data Sample**:
 
 ![Password](images/passwordprotect.png)
 
