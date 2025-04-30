@@ -4,7 +4,7 @@
 
 # Writeup
 
-On peut d'abord se pencher vers le fichier pcap pour trouver le vecteur d'intrusion.
+On peut d'abord se pencher vers la capture `.pcap` pour trouver le vecteur d'intrusion.
 
 En ouvrant ce fichier on remarque différents échanges sur des protocoles comme UDP ou TCP qui ne semblent pas être la piste.
 
@@ -114,7 +114,7 @@ http://vastation.null:8080/ntpdate_util.cpython-37.pyc
 
 Il s’agit d’un fichier Python compilé au format bytecode. 
 
-- On le recupère avec autopsy :
+- Autopsy nous permet de le récupérer :
 
 ![autopsy](images/autopsy.png)
 
@@ -228,7 +228,7 @@ Chaque paquet contient une section « Data (40 bytes) » – soit 40 octets en
 
 ![ICMP](images/blocicmp.png)
 
-Après une analyse plus approfondie, on déduit que: au sein de ces 40 octets, les 16 octets utiles pour le décryptage se situent à partir d’un offset de 16 (la taille requise pour AES). Donc si on isole les 16 octets (32 caractères hex) à partir de l’offset 16 de chaque paquet, on obtient le bon bloc chiffré.
+Après une analyse plus approfondie, on déduit que au sein de ces 40 octets, les 16 octets utiles pour le décryptage se situent à partir d’un offset de 16 (la taille requise pour AES). Donc si on isole les 16 octets (32 caractères hex) à partir de l’offset 16 de chaque paquet, on obtient le bon bloc chiffré.
 
 On peut ensuite déchiffrer avec la clé et l’IV connus (script décompilé) :
 
