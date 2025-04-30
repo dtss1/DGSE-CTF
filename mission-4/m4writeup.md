@@ -184,7 +184,7 @@ su - document-user -c "cd /app && flask run --host=0.0.0.0 --port=5000"
 ```
 > On a donc la solution à notre problème.
 
-- Il applique chmod 1773 sur le dossier /dev/shm, ce qui me garantit que ce répertoire est accessible en écriture pour tous les utilisateurs.
+- Il applique chmod 1773 sur le dossier /dev/shm, ce qui garantit que ce répertoire est accessible en écriture pour tous les utilisateurs.
 
 --> On copie les deux fichiers importants vers /dev/shm en tant qu'administrator et on donne les droits de lecture à tous les utilisateurs :
 
