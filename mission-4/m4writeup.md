@@ -200,8 +200,8 @@ scp -P 22222 executor@163.172.67.183:/dev/shm/logo.jpg .
 scp -P 22222 executor@163.172.67.183:/dev/shm/vault.kdbx .
 ```
 
-- KeePass permet d’ouvrir le vault, mais l’accès nécessite un mot de passe qui n’est pas disponible. Il est toutefois possible d’utiliser un keyfile pour le déverrouiller. L’image logo.png est utilisée comme keyfile et permet de dévérouiller le coffre-fort :
-  
+- KeePass permet d’ouvrir le vault, mais l’accès nécessite un mot de passe qui n’est pas disponible. Il est toutefois possible d’utiliser un `keyfile`. L’image `logo.png` est utilisée comme keyfile et permet de le déverrouiller :
+
 ![Flag](images/flag.png)
 
 **Flag:**
