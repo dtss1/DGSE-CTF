@@ -43,7 +43,7 @@ Lors d'une précédente simulation de négociation, un utilisateur a fourni un i
 
 ![Clé](images/cle.png)
 
-On obtient la clé de déchiffrement `cf0fe99934cbc10c7e55bada9870bda1691a4a27`, on peut extraire le contenu de l'archive zip, on trouve le flag dans le fichier `Medicine_Recipes.pdf` :
+On obtient la clé de déchiffrement `cf0fe99934cbc10c7e55bada9870bda1691a4a27` avec laquelle on peut extraire le contenu de l'archive zip, on trouve le flag dans le fichier `Medicine_Recipes.pdf` :
 
 ![Flag](images/flag.png)
 
