@@ -10,8 +10,8 @@ En ouvrant ce fichier on remarque différents échanges sur des protocoles comme
 
 En revanche en filtrant avec http, on remarque un :
 
-```
-GET /install_nptdate.sh HTTP/1.1 
+```http
+GET /install_nptdate.sh HTTP/1.1
 ```
 
 Voici le script .sh :
