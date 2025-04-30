@@ -228,7 +228,7 @@ Chaque paquet contient une section « Data (40 bytes) » – soit 40 octets en
 
 ![ICMP](images/blocicmp.png)
 
-Après une analyse plus approfondie, on déduit que au sein de ces 40 octets, les 16 octets utiles pour le décryptage se situent à partir d’un offset de 16 (la taille requise pour AES). Donc si on isole les 16 octets (32 caractères hex) à partir de l’offset 16 de chaque paquet, on obtient le bon bloc chiffré.
+Après une analyse plus approfondie, on déduit que au sein de ces `40 octets`, les `16 octets` utiles pour le décryptage se situent à partir d’un `offset de 16` (la taille requise pour AES). Donc si on isole les `16 octets` (32 caractères hex) `à partir de l’offset 16` de chaque paquet, on obtient le bon bloc chiffré.
 
 On peut ensuite déchiffrer avec la clé et l’IV connus (script décompilé) :
 
