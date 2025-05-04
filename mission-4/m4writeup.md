@@ -49,7 +49,7 @@ On upload ce fichier via la deuxième option et on récupère le contenu de /etc
 
 Nous pouvons modifier l'archive manuellement à chaque fois que l'on veut tester une cible pour le path **XXE** mais c'est contraignant.
 
--- Automatisation de ce processus grâce à un script python :
+- Automatisation de ce processus grâce à un script python :
 
 ```python
 import zipfile
@@ -142,9 +142,10 @@ sshpass -p 'cABdTXRyUj5qgAEl0Zc0a' ssh -p 22222 executor@163.172.67.183
 
 `logo.jpg`   - C'est un fichier image qui a première vu n'a rien d'intéressant ^^.
 
+---
 
 >[!IMPORTANT]
-> Il me semble important de revenir rapidement sur les permissions UNIX, pour une meilleure compréhension du WU et à titre informatif.
+> Il paraît important de revenir rapidement sur les permissions UNIX, pour une meilleure compréhension du WU et à titre informatif.
 
 Le principe de chmod repose sur la représentation octale des permissions UNIX, où chaque chiffre (0–7) encode trois droits (lecture, écriture, exécution) sous forme de bits (1 = droit accordé, 0 = droit refusé) :
 
@@ -162,19 +163,25 @@ chmod <X><Y><Z> <fichier|répertoire>
 
 - Z = droits des autres
 
-**Comment lire un chiffre :**
+**Comment interpréter un chiffre octal :**
 
-- On convertit le chiffre octal en binaire (3 bits).
+1. **Conversion en binaire**
 
-- Chaque bit correspond, dans l’ordre :
+- On transforme le chiffre (0–7) en sa représentation binaire sur trois positions (bits).
 
-- bit 4 → lecture (r)
+2. **Signification de chaque bit**
 
-- bit 2 → écriture (w)
+- Premier bit (2² = 4) ⇒ lecture (r).
 
-- bit 1 → exécution (x)
+- Deuxième bit (2¹ = 2) ⇒ écriture (w).
 
-- Un bit à 1 affiche la lettre, un bit à 0 affiche “–”.
+- Troisième bit (2⁰ = 1) ⇒ exécution (x).
+
+3. **Affichage des droits**
+
+- Si un bit vaut 1, on affiche la lettre correspondante (r, w ou x).
+
+- Si un bit vaut 0, on affiche un tiret (–), pour indiquer l’absence du droit.
 
 **Exemple :**
 
@@ -189,9 +196,9 @@ chmod <X><Y><Z> <fichier|répertoire>
 
 4 → 100 → r–– (autres : lecture seule)
 ```
+---
 
-
-- On veut donc récupérer ces deux fichiers car ils peuvent être la clé de l'énigme mais en l'état **nous n'avons pas les droits de lecture dessus.**
+On veut donc récupérer ces deux fichiers car ils peuvent être la clé de l'énigme mais en l'état **nous n'avons pas les droits de lecture dessus.**
 
 --> En regardant les droits sudoers en tant qu'executor, on remarque que l'on peut éxécuter le binaire screenfetch en tant qu'administrator:
 
