@@ -142,8 +142,9 @@ sshpass -p 'cABdTXRyUj5qgAEl0Zc0a' ssh -p 22222 executor@163.172.67.183
 
 `logo.jpg`   - C'est un fichier image qui a première vu n'a rien d'intéressant ^^.
 
+
 >[!IMPORTANT]
-> Il me semble important de revenir rapidement sur les permissions UNIX pour une meilleure compréhension du WU.
+> Il me semble important de revenir rapidement sur les permissions UNIX, pour une meilleure compréhension du WU et à titre informatif.
 
 Le principe de chmod repose sur la représentation octale des permissions UNIX, où chaque chiffre (0–7) encode trois droits (lecture, écriture, exécution) sous forme de bits (1 = droit accordé, 0 = droit refusé) :
 
@@ -181,11 +182,14 @@ chmod <X><Y><Z> <fichier|répertoire>
   chmod 644 file
   ```
 
+```zsh
 6 → 110 → rw– (propriétaire : lecture + écriture)
 
 4 → 100 → r–– (groupe : lecture seule)
 
 4 → 100 → r–– (autres : lecture seule)
+```
+
 
 - On veut donc récupérer ces deux fichiers car ils peuvent être la clé de l'énigme mais en l'état **nous n'avons pas les droits de lecture dessus.**
 
