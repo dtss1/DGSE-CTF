@@ -142,7 +142,52 @@ sshpass -p 'cABdTXRyUj5qgAEl0Zc0a' ssh -p 22222 executor@163.172.67.183
 
 `logo.jpg`   - C'est un fichier image qui a première vu n'a rien d'intéressant ^^.
 
-- On veut récupérer ces deux fichiers car ils peuvent être la clé de l'énigme mais en l'état **nous n'avons pas les droits de lecture dessus.**
+>[!IMPORTANT]
+> Il me semble important de revenir rapidement sur les permissions UNIX pour une meilleure compréhension du WU.
+
+Le principe de chmod repose sur la représentation octale des permissions UNIX, où chaque chiffre (0–7) encode trois droits (lecture, écriture, exécution) sous forme de bits (1 = droit accordé, 0 = droit refusé) :
+
+![Unix](images/chmod.png)
+
+**Syntaxe :**
+
+```
+chmod <X><Y><Z> <fichier|répertoire>
+```
+
+- X = droits du propriétaire
+
+- Y = droits du groupe
+
+- Z = droits des autres
+
+**Comment lire un chiffre :**
+
+- On convertit le chiffre octal en binaire (3 bits).
+
+- Chaque bit correspond, dans l’ordre :
+
+- bit 4 → lecture (r)
+
+- bit 2 → écriture (w)
+
+- bit 1 → exécution (x)
+
+- Un bit à 1 affiche la lettre, un bit à 0 affiche “–”.
+
+**Exemple :**
+
+  ```
+  chmod 644 file
+  ```
+
+6 → 110 → rw– (propriétaire : lecture + écriture)
+
+4 → 100 → r–– (groupe : lecture seule)
+
+4 → 100 → r–– (autres : lecture seule)
+
+- On veut donc récupérer ces deux fichiers car ils peuvent être la clé de l'énigme mais en l'état **nous n'avons pas les droits de lecture dessus.**
 
 --> En regardant les droits sudoers en tant qu'executor, on remarque que l'on peut éxécuter le binaire screenfetch en tant qu'administrator:
 
