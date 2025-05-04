@@ -116,9 +116,7 @@ print(response.text)
 On essaie de récupérer plusieurs fichiers systèmes comme les clés ssh mais une erreur indique que nous n'avons pas les droits pour les lire.
 
 * On arrive dans un premier temps à récupérer la config OpenSSH avec le path "/etc/ssh/sshd_config" ce qui leak le port utilisé pour OpenSSH : **Port 22222**
-* Dans un second temps on récupère le hostname (document-station).
-
-On recupère l'historique bash de **document-user** :
+* Dans un second temps on récupère de **document-user** :
 
 ![History](images/Bashistory.png)
 
@@ -136,7 +134,9 @@ Le fichier passwd nous a également fuiter d'autres users, on en teste plusieurs
 sshpass -p 'cABdTXRyUj5qgAEl0Zc0a' ssh -p 22222 executor@163.172.67.183
 ```
 
-- On navigue rapidement dans les répertoires, une fois dans /home/administrator/, plusieurs éléments intéressants apparaissent.
+- On navigue rapidement dans les répertoires, une fois dans `/home/administrator/`, plusieurs éléments intéressants apparaissent :
+
+![Droits](images/droits.png)
 
 `vault.kdbx` - C'est un fichier de base de données KeePass, souvent utilisé pour stocker des mots de passe de manière chiffrée.
 
