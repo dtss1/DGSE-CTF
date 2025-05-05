@@ -1,0 +1,14 @@
+name: Rendre le dépôt public
+
+on:
+  schedule:
+    - cron: '0 8 7 5 *'  # Exécution à 08h00 UTC, soit 10h00 heure Parisienne (CEST)
+
+jobs:
+  make-public:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Modifier la visibilité du dépôt
+        run: gh repo edit ${{ github.repository }} --visibility public
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
