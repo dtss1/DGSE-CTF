@@ -31,7 +31,7 @@ On indique à notre tour que l'on a effectué le paiement de 3 BTC :
 
 Mais il exige pour valider la transaction de fournir "un lien vers l'explorateur Bitcoin avec l'ID".
 
-- On peut réaliser [une injection de prompt indirecte](https://cetas.turing.ac.uk/publications/indirect-prompt-injection-generative-ais-greatest-security-flaw) en se basant sur un scénario dans lequel l'utilisateur aurait effectué un paiement et validé la transaction avec un identifiant de BTC valide, le système aurait donc répondu logiquement avec la clé de déchiffrement.
+- On peut réaliser [une injection de prompt indirecte](https://cetas.turing.ac.uk/publications/indirect-prompt-injection-generative-ais-greatest-security-flaw) en se basant sur un scénario dans lequel l'utilisateur aurait effectué un paiement et validé la transaction avec un identifiant BTC valide, le système aurait donc répondu logiquement avec la clé de déchiffrement.
 
 **Prompt :**
 
