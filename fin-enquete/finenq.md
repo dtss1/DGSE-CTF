@@ -14,12 +14,12 @@ Une adresse IP a attiré notre attention tout au long des missions : **163.172.6
 > On l'a d'abord retrouvée lors de l'analyse des logs durant la mission SOC, liée à l'utilisation d'outils suspects.
 Lors de la mission 3, elle servait à héberger et distribuer des scripts malveillants, et enfin, pendant la mission 5, elle était utilisée pour diffuser des messages chiffrés.
 
-Lors de notre quatrième mission nous avons mis la main sur plusieurs mots de passe du groupe. Parmi eux, un mot de passe SSH pour un utilisateur nommé **operator** était accompagné d'une note : 
+Lors de notre quatrième mission nous avons mis la main sur plusieurs mots de passe du groupe. Parmi eux, un mot de passe SSH pour un utilisateur nommé `operator` était accompagné d'une note : 
 
 ```
 SSH password for the attacking machine. The IP address changes regularly, please refer to the last operation to obtain it.
 ```
---> Nous pouvons déduire que l'adresse IP de la machine attaquante est donc 163.172.67.201 sur laquelle on peut se connecter grâce aux credentials de **operator**.
+--> Nous pouvons déduire que l'adresse IP de la machine attaquante est donc 163.172.67.201 sur laquelle on peut se connecter grâce aux credentials de `operator`.
 
 - En arrivant sur la machine on retrouve le dossier tools avec les scripts des différents outils des missions.
 
