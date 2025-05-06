@@ -115,7 +115,7 @@ print(response.text)
 
 On essaie de récupérer plusieurs fichiers systèmes comme les clés ssh mais une erreur indique que nous n'avons pas les droits pour les lire.
 
-* On arrive dans un premier temps à récupérer la config OpenSSH avec le path "/etc/ssh/sshd_config" ce qui leak le port utilisé pour OpenSSH : **Port 22222**
+* On arrive dans un premier temps à récupérer la config OpenSSH avec le path `/etc/ssh/sshd_config` ce qui leak le port utilisé pour OpenSSH : **Port 22222**
 * Dans un second temps on récupère l'historique bash de `document-user` :
 
 ![History](images/Bashistory.png)
@@ -126,7 +126,7 @@ Celui-ci contient la commande :
 echo "cABdTXRyUj5qgAEl0Zc0a" >> /tmp/exec_ssh_password.tmp
 ```
 
-Nous pouvons déduire que **cABdTXRyUj5qgAEl0Zc0a** est le mot de passe d'un utilisateur, or ce n'est pas celui de `document-user`.
+Nous pouvons déduire que `cABdTXRyUj5qgAEl0Zc0a` est le mot de passe SSH d'un utilisateur, or ce n'est pas celui de `document-user`.
 
 Le fichier passwd nous a également fuiter d'autres users, on en teste plusieurs avec ce mot de passe, on finit par trouver le bon, il s'agit de `executor`.
 
