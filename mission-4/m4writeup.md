@@ -20,7 +20,7 @@ Pour ces deux options nous devons obligatoirement upload un **document word .doc
 
 On upload un document .docx vierge avec la première option et on récupère le document "signé".
 
--- Le fichier **app.xml** contient une balise personnalisée **VictimID : 
+-- Le fichier **app.xml** contient une balise personnalisée **VictimID**: 
 
 ```xml
 <VictimID>victim-42382ede-f219-4076-9758-be4ee93686d4</VictimID>
