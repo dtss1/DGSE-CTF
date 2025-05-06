@@ -200,7 +200,7 @@ chmod <X><Y><Z> <fichier|répertoire>
 
 On veut donc récupérer ces deux fichiers car ils peuvent être la clé de l'énigme mais en l'état **nous n'avons pas les droits de lecture dessus.**
 
---> En regardant les droits sudoers en tant qu'executor, on remarque que l'on peut éxécuter le binaire screenfetch en tant qu'administrator:
+--> En regardant les droits sudoers en tant qu'executor, on remarque que l'on peut éxécuter le binaire screenfetch avec les privilèges de l'utilisateur `administrator`:
 
 ```
 User executor may run the following commands on document-station:
@@ -216,7 +216,7 @@ User executor may run the following commands on document-station:
 sudo -u administrator /usr/bin/screenfetch -s -S '/bin/bash -p'
 ```
 
-- Ici, on utilise l’option -S pour exécuter `/bin/bash -p`, le flag `-p` (privileged mode) permet de conserver les privilèges de l’utilisateur avec lequel la commande est lancée — en l’occurrence administrator.
+- Ici, on utilise l’option -S pour exécuter `/bin/bash -p`, le flag `-p` (privileged mode) permet de conserver les privilèges de l’utilisateur avec lequel la commande est lancée — en l’occurrence `administrator`.
 
 --> Cela permet de lancer un shell Bash en tant qu'administrator, en exploitant **cette erreur de configuration** :
 
@@ -240,9 +240,9 @@ su - document-user -c "cd /app && flask run --host=0.0.0.0 --port=5000"
 ```
 > On a donc la solution à notre problème.
 
-- Il applique `chmod 1773` sur le dossier /dev/shm, ce qui garantit que ce répertoire est accessible en écriture pour tous les utilisateurs.
+- Il applique `chmod 1773` sur le dossier `/dev/shm`, ce qui garantit que ce répertoire est accessible en écriture pour tous les utilisateurs.
 
---> On copie les deux fichiers importants vers /dev/shm en tant qu'administrator et on donne les droits de lecture à tous les utilisateurs :
+--> On copie les deux fichiers importants vers `/dev/shm` en tant qu'`administrator` et on donne les droits de lecture à tous les utilisateurs :
 
 ```
 cp /home/administrator/logo.jpg   /home/administrator/vault.kdbx  /dev/shm/
