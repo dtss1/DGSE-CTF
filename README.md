@@ -1,4 +1,4 @@
-# DGSECTF - Writeups
+# DGSECTF - Write Ups
 
 ---
 
