@@ -107,12 +107,11 @@ Il se trouve dans `/opt/fJQsJUNS/.sys`.
 johndoe@UXWS112:/opt/fJQsJUNS$ file .sys 
 .sys: Byte-compiled Python module for CPython 3.7, timestamp-based, .py timestamp: Mon Mar 24 15:04:51 2025 UTC, .py size: 2358 bytes
 ```
+Il s’agit d’un fichier Python compilé au format bytecode. 
 
 >[!NOTE]
 > On le savait déjà car en décodant la chaîne en Base64 du echo : "aHR0cDovL3Zhc3RhdGlvbi5udWxsOjgwODAvbnRwZGF0ZV91dGlsLmNweXRob24tMzcucHlj" --> 
-http://vastation.null:8080/ntpdate_util.cpython-37.pyc
-
-Il s’agit d’un fichier Python compilé au format bytecode. 
+http://vastation.null:8080/ntpdate_util.cpython-37.pyc 
 
 - Autopsy nous permet de le récupérer :
 
